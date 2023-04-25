@@ -21,7 +21,7 @@ takes care of loading React and MaterialUI as UMD files from the `unpkg.com` CDN
 bundle and binding it to the root DOM node.
 
 Additional plugins are loaded via the `octoprint.plugin.uiprototype.gather_modules` hook, which needs to return 
-a dictionary consisting of a global identifier and a JS file to load. See the [test plugin]() 
+a dictionary consisting of a global identifier and a JS file to load. See the [test plugin](https://github.com/OctoPrint/OctoPrint-UiPrototype-TestPlugin) 
 for an example of how to do that. The outcome of gathering plugins is made available on the frontend via
 `OCTOPRINT_CONFIG.modules`.
 
