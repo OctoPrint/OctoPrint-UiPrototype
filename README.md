@@ -10,7 +10,7 @@ extension concept, it's non functional as an OctoPrint frontend itself.
 Install via the bundled [Plugin Manager](https://docs.octoprint.org/en/master/bundledplugins/pluginmanager.html)
 or manually using this URL:
 
-    https://github.com/OctoPrint/OctoPrint-MaterialUI/archive/main.zip
+    https://github.com/OctoPrint/OctoPrint-UiPrototype/archive/main.zip
 
 ## Implementation details
 
