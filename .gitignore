@@ -1,0 +1,11 @@
+*.pyc
+*.swp
+.idea
+*.iml
+build
+*.egg*
+.DS_Store
+*.zip
+node_modules
+__pycache__
+./dist

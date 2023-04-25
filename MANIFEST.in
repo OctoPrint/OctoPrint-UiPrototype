@@ -1,0 +1,5 @@
+include README.md
+recursive-include octoprint_uiprototype/dist *
+recursive-include octoprint_uiprototype/templates *
+recursive-include octoprint_uiprototype/translations *
+recursive-include octoprint_uiprototype/static *

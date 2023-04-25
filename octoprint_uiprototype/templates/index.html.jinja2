@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <title>OctoPrint UI Prototype</title>
+
+    <script>
+        const baseurl = "{{ url_for('index') }}";
+        const apiBaseurl = baseurl + "api";
+        const pluginBaseurl = baseurl + "plugin";
+
+        const sockjsUri = baseurl + "sockjs";
+
+        const modules = {{ modules | tojson }};
+        const modulePrefix = "{{ url_for('index', _external=True) }}";
+
+        window.OCTOPRINT_CONFIG = {
+            baseurl,
+            apiBaseurl,
+            pluginBaseurl,
+            sockjsUri,
+            modules,
+            modulePrefix,
+        }
+    </script>
+
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-is@18/umd/react-is.development.js"></script>
+    <script crossorigin src="https://unpkg.com/@mui/material@5.12.1/umd/material-ui.development.js"></script>
+    <script crossorigin src="https://unpkg.com/babel-standalone@latest/babel.min.js"></script>
+    
+    <script src="{{ url_for("index") }}plugin/uiprototype/dist/octoprint_uiprototype.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", (event) => {
+            const App = octoprint_uiprototype.App;
+            const root = ReactDOM.createRoot(document.getElementById("root"));
+            root.render(App());
+        });
+    </script>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+  </body>
+</html>
